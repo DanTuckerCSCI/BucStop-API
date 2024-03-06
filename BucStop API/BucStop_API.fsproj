@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>BucStop_API</RootNamespace>
+    <UserSecretsId>f1547239-8ada-4136-b35c-174e91614359</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Models\Models.fs" />
+    <Compile Include="Controllers\GameResultsController.fs" />
+    <Compile Include="Startup.fs" />
+    <Compile Include="Controllers\GameInfoController.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+  </ItemGroup>
+
+</Project>
